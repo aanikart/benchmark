@@ -13,8 +13,8 @@ export default function SavedLayout() {
         contentStyle: { backgroundColor: colors.canvas },
       }}
     >
-      <Stack.Screen name="index" options={{ title: "Your saved outings" }} />
-      <Stack.Screen name="[id]" options={{ title: "Saved outing" }} />
+      <Stack.Screen name="index" options={{ title: "Your walks" }} />
+      <Stack.Screen name="[id]" options={{ title: "A kept walk" }} />
     </Stack>
   );
 }

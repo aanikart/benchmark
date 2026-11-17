@@ -14,9 +14,9 @@ export default function PlanLayout() {
       }}
     >
       <Stack.Screen name="index" options={{ title: "Plan", headerShown: false }} />
-      <Stack.Screen name="start" options={{ title: "Starting point" }} />
-      <Stack.Screen name="compare" options={{ title: "Routes" }} />
-      <Stack.Screen name="steps" options={{ title: "Route steps" }} />
+      <Stack.Screen name="start" options={{ title: "Set off from" }} />
+      <Stack.Screen name="compare" options={{ title: "Ways there" }} />
+      <Stack.Screen name="steps" options={{ title: "Step by step" }} />
     </Stack>
   );
 }

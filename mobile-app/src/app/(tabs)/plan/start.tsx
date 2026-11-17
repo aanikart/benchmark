@@ -33,9 +33,9 @@ export default function StartPicker() {
       <TextInput
         value={text}
         onChangeText={setText}
-        placeholder="Search starting places"
+        placeholder="Search for your trailhead"
         placeholderTextColor={colors.secondary}
-        accessibilityLabel="Search starting places by name"
+        accessibilityLabel="Search for where you're setting off from"
         style={styles.search}
         clearButtonMode="while-editing"
       />
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     borderWidth: 2, borderColor: "transparent", borderRadius: radius, paddingHorizontal: space.md,
     paddingVertical: space.sm, marginBottom: space.sm + 2, ...shadow,
   },
-  rowOn: { borderColor: colors.accent, backgroundColor: "#F6FBF8" },
+  rowOn: { borderColor: colors.accent, backgroundColor: "#F3F7F0" },
   name: { fontSize: type.body, fontWeight: "600", color: colors.text },
   kind: { fontSize: type.support, color: colors.secondary },
   context: { fontSize: type.support, color: colors.text },

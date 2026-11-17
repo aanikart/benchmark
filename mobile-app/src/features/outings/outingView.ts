@@ -13,8 +13,8 @@ export interface OutingView {
 
 export const RETURN_LABEL = {
   walk: "Walking back",
-  arranged: "Return arranged separately",
-  undecided: "Outward only — return not decided",
+  arranged: "Getting a ride back",
+  undecided: "One way for now",
 } as const;
 
 /** Derive a saved outing's metrics from its own snapshot (never from today's catalog). */

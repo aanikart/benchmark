@@ -13,9 +13,9 @@ import { ApiError, REGION_ID, fetchReturn, newRequestId } from "../../services/o
 import { colors, minTarget, radius, space, type } from "../../theme/tokens";
 
 const RETURN_CHOICES: { id: ReturnMode; label: string; detail: string }[] = [
-  { id: "walk", label: "Walk back", detail: "Fetch a separate return route through the same stops in reverse." },
-  { id: "arranged", label: "Return arranged separately", detail: "Records your choice only. Nothing is booked." },
-  { id: "undecided", label: "Decide later", detail: "Saves an outward-only draft." },
+  { id: "walk", label: "Walk back", detail: "We'll map a way home past the same benches." },
+  { id: "arranged", label: "Getting a ride back", detail: "Just noted for you. Nothing is booked." },
+  { id: "undecided", label: "Decide later", detail: "Keep it as a one-way walk for now." },
 ];
 
 export default function SaveOuting() {
@@ -27,7 +27,7 @@ export default function SaveOuting() {
   const candidate = [cmp.data?.direct, cmp.data?.alternative].find((c) => c?.id === state.selectedRouteId) ?? null;
   const destination = state.submitted ? placesById.get(state.submitted.destinationId) : undefined;
 
-  const [name, setName] = useState(`Walk to ${state.destinationVia?.name ?? placeLabel(destination)}`.slice(0, 80));
+  const [name, setName] = useState(`A walk to ${state.destinationVia?.name ?? placeLabel(destination)}`.slice(0, 80));
   const [note, setNote] = useState("");
   const [returnMode, setReturnMode] = useState<ReturnMode | null>(null);
   const [busy, setBusy] = useState(false);
@@ -103,17 +103,17 @@ export default function SaveOuting() {
   return (
     <KeyboardAvoidingView style={{ flex: 1 }} behavior={Platform.OS === "ios" ? "padding" : undefined} keyboardVerticalOffset={64}>
       <ScrollView style={styles.screen} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-        <SectionLabel>Name</SectionLabel>
+        <SectionLabel>Call it</SectionLabel>
         <TextInput
           value={name}
           onChangeText={setName}
           maxLength={80}
-          accessibilityLabel="Outing name"
+          accessibilityLabel="Name of this walk"
           style={styles.input}
         />
         {!nameOk ? <Text style={styles.error} accessibilityRole="alert">Enter a name for this outing.</Text> : null}
 
-        <SectionLabel>Private note (optional)</SectionLabel>
+        <SectionLabel>A note to yourself (optional)</SectionLabel>
         <TextInput
           value={note}
           onChangeText={setNote}
@@ -122,9 +122,9 @@ export default function SaveOuting() {
           accessibilityLabel="Private note, optional"
           style={[styles.input, styles.note]}
         />
-        <Text style={styles.support}>{note.length}/{LIMITS.maxNoteLength} · stays on this phone</Text>
+        <Text style={styles.support}>{note.length}/{LIMITS.maxNoteLength} · only on this phone</Text>
 
-        <SectionLabel>Getting back</SectionLabel>
+        <SectionLabel>And the way home?</SectionLabel>
         <View accessibilityRole="radiogroup" style={{ gap: space.sm }}>
           {RETURN_CHOICES.map((c) => {
             const on = c.id === returnMode;
@@ -146,13 +146,13 @@ export default function SaveOuting() {
             );
           })}
         </View>
-        {!returnMode ? <Text style={styles.support}>Choose how you'll get back to save.</Text> : null}
+        {!returnMode ? <Text style={styles.support}>Pick how you'll get home to keep this walk.</Text> : null}
 
         {error ? <Notice>{error}</Notice> : null}
 
         <View style={{ marginTop: space.lg, gap: space.sm }}>
           <PrimaryButton
-            label={busy ? "Saving…" : error && returnMode === "walk" ? "Retry" : "Save"}
+            label={busy ? "Keeping…" : error && returnMode === "walk" ? "Try again" : "Keep this walk"}
             busy={busy}
             disabled={!returnMode || !nameOk}
             onPress={save}

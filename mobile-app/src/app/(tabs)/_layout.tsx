@@ -17,14 +17,14 @@ export default function TabsLayout() {
         name="plan"
         options={{
           title: "Plan",
-          tabBarIcon: ({ color, focused, size }) => <Ionicons name={focused ? "compass" : "compass-outline"} color={color as string} size={size} />,
+          tabBarIcon: ({ color, focused, size }) => <Ionicons name={focused ? "trail-sign" : "trail-sign-outline"} color={color as string} size={size} />,
         }}
       />
       <Tabs.Screen
         name="saved"
         options={{
-          title: "Saved",
-          tabBarIcon: ({ color, focused, size }) => <Ionicons name={focused ? "bookmark" : "bookmark-outline"} color={color as string} size={size} />,
+          title: "Walks",
+          tabBarIcon: ({ color, focused, size }) => <Ionicons name={focused ? "footsteps" : "footsteps-outline"} color={color as string} size={size} />,
         }}
       />
     </Tabs>

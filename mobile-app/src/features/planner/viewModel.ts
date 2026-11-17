@@ -42,7 +42,7 @@ export function kindLine(p: Place): string {
 export const known = (v: "yes" | "no" | "unknown") => (v === "yes" ? "Yes" : v === "no" ? "No" : "Not mapped");
 
 export function seatSummary(p: Place): string {
-  const back = p.backrest === "yes" ? "Backrest" : p.backrest === "no" ? "No backrest" : "Backrest not mapped";
+  const back = p.backrest === "yes" ? "Has a backrest" : p.backrest === "no" ? "No backrest" : "Backrest unknown";
   const edited = p.sourceEditedAt ? ` · Map edited ${formatSourceDate(p.sourceEditedAt.slice(0, 7))}` : "";
   return back + edited;
 }
@@ -73,35 +73,35 @@ export function routeCardModel(
   const uncounted = stops.length - counted;
   const isDirect = candidate.kind === "direct";
   const title = isDirect
-    ? "Direct route"
+    ? "Straight there"
     : `Via ${placeLabel(placesById.get(candidate.stopPlaceIds[0])).replace(/^Mapped /, "a mapped ")}` +
       (candidate.stopPlaceIds.length > 1 ? " + 1 more" : "");
 
   let tradeoff: string;
   if (isDirect) {
     tradeoff = analysis.withinMappedPreference
-      ? "This is the shortest route, and its mapped distance is within your limit."
-      : "This route is shorter, but has no planned place to sit.";
+      ? "The quickest way there, and short enough that you won't need a pause."
+      : "The quickest way there, but there's no bench to stop at along the way.";
   } else {
     const extra = analysis.totalMetres - direct.route.totalMetres;
-    const seats = `${counted} mapped seating stop${counted === 1 ? "" : "s"}`;
+    const seats = counted === 1 ? "a bench to pause at" : `${counted} benches to pause at`;
     const head =
       counted === 0
-        ? "None of this route's stops count as a rest with your current settings."
+        ? "None of the stops on this way count as a rest with your current settings."
         : extra < 1
-          ? `Same distance as the direct route, with ${seats} planned.`
-          : `About ${fmtFt(extra)} farther; includes ${seats}.`;
+          ? `No extra walking, and you get ${seats} on the way.`
+          : `A ${fmtFt(extra)} detour that gives you ${seats}.`;
     tradeoff = analysis.withinMappedPreference || counted === 0
       ? head
-      : `${head} Its longest stretch is still over your limit.`;
+      : `${head} One stretch is still longer than you'd like.`;
   }
 
   const a11ySummary =
-    `${title}. About ${fmtFt(analysis.totalMetres)} total. Longest mapped stretch about ` +
+    `${title}. About ${fmtFt(analysis.totalMetres)} in all. Longest stretch without a pause about ` +
     `${fmtFt(analysis.longestMappedStretchMetres)}, ` +
-    `${analysis.withinMappedPreference ? "within" : "over"} your limit. ` +
-    (counted ? `${counted} planned seating stop${counted === 1 ? "" : "s"}. ` : "No planned seating stops. ") +
-    "Seating and approach unconfirmed.";
+    `${analysis.withinMappedPreference ? "within" : "longer than"} your pause distance. ` +
+    (counted ? `${counted} bench stop${counted === 1 ? "" : "s"}. ` : "No bench stops. ") +
+    "Benches are from map data and aren't confirmed.";
 
   return { id: candidate.id, title, evaluation, countedStops: counted, uncountedStops: uncounted, tradeoff, a11ySummary };
 }

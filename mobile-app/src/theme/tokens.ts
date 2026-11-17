@@ -1,24 +1,26 @@
 import { Platform } from "react-native";
 
+/** Trail-map palette: parchment paper, pine ink, sage washes and an ochre trail marker. */
 export const colors = {
-  canvas: "#FBF7EF",
-  surface: "#FFFFFF",
-  surfaceTint: "#F6F2EA",
-  text: "#14231F",
-  secondary: "#4F5D58",
-  accent: "#13804F",
-  accentDark: "#0B4F33",
-  accentSoft: "#D9F2E4",
-  sun: "#FFB627",
-  sunSoft: "#FFF0CC",
+  canvas: "#F2EEE5", // parchment
+  surface: "#FBF9F4",
+  surfaceTint: "#EEE9DE",
+  text: "#26302B", // pine ink
+  secondary: "#5B645E",
+  accent: "#3E6A50", // pine
+  accentDark: "#2A4636", // deep forest
+  accentSoft: "#DCE5D6", // sage wash
   onAccent: "#FFFFFF",
-  cautionText: "#765114",
-  cautionBg: "#FFF1CF",
-  cautionStrong: "#FFB627",
-  border: "#182A27",
-  hairline: "#E4E0D7",
-  disabled: "#9AA39F",
-  rest: "#246B54",
+  sun: "#D9B27C", // ochre trail marker
+  sunSoft: "#F3E3CB",
+  cautionText: "#77461A",
+  cautionBg: "#F3E3CB",
+  cautionStrong: "#E3BE8E",
+  border: "#26302B",
+  hairline: "#E0DACD",
+  disabled: "#9AA39C",
+  rest: "#3E6A50",
+  contour: "#3B5C49", // banner topo lines
 } as const;
 
 export const space = { xs: 4, sm: 8, md: 12, lg: 16, xl: 24, xxl: 32 } as const;
@@ -37,18 +39,18 @@ export const minTarget = 48;
 
 /** Soft elevation instead of heavy outlines. */
 export const shadow = Platform.select({
-  ios: { shadowColor: "#1A2A26", shadowOpacity: 0.08, shadowRadius: 14, shadowOffset: { width: 0, height: 4 } },
+  ios: { shadowColor: "#2A3A31", shadowOpacity: 0.07, shadowRadius: 12, shadowOffset: { width: 0, height: 3 } },
   default: { elevation: 2 },
 })!;
 
-/** Per-category tile colors so place types are recognisable at a glance (text/icon contrast ≥ 4.5:1). */
+/** Muted per-category tiles, like coloured trail blazes (icon contrast ≥ 4.5:1). */
 export const tones = {
-  seat: { bg: "#D9F2E4", fg: "#0B6B3F" },
-  cafe: { bg: "#FFE6D1", fg: "#9A3F08" },
-  art: { bg: "#F1E1FA", fg: "#6E2A87" },
-  library: { bg: "#DCE9FF", fg: "#1C4A99" },
-  community: { bg: "#FFE0EA", fg: "#9C1F4B" },
-  garden: { bg: "#E3F4D2", fg: "#3A6A10" },
-  neutral: { bg: "#EEF0EC", fg: "#3E4B47" },
+  seat: { bg: "#DDE7D7", fg: "#3F6B45" },
+  cafe: { bg: "#F1DFCF", fg: "#8A4B26" },
+  art: { bg: "#E9DFE8", fg: "#6A4A6E" },
+  library: { bg: "#DCE4EA", fg: "#3D5873" },
+  community: { bg: "#F0DDE0", fg: "#874457" },
+  garden: { bg: "#E4E8D3", fg: "#556B2F" },
+  neutral: { bg: "#ECEAE3", fg: "#4A544E" },
 } as const;
 export type Tone = keyof typeof tones;

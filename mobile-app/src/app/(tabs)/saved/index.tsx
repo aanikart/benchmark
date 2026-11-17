@@ -27,9 +27,9 @@ export default function SavedOutings() {
     return (
       <View style={styles.empty}>
         <IconTile name="bench" size={72} />
-        <Text style={styles.emptyTitle}>No saved outings yet</Text>
-        <Text style={styles.support}>Plan an outing and choose “Save this outing” to keep it here.</Text>
-        <SecondaryButton label="Plan an outing" icon="compass-outline" onPress={() => router.navigate("/plan")} />
+        <Text style={styles.emptyTitle}>No walks kept yet</Text>
+        <Text style={[styles.support, { textAlign: "center" }]}>When a route feels right, tap “Keep this walk” and it'll wait for you here.</Text>
+        <SecondaryButton label="Plan a walk" icon="trail-sign-outline" onPress={() => router.navigate("/plan")} />
       </View>
     );
   }
@@ -39,7 +39,7 @@ export default function SavedOutings() {
       {(q.data ?? []).map((row) => (
         <OutingCard key={row.id} row={row} onPress={() => router.push({ pathname: "/saved/[id]", params: { id: row.id } })} />
       ))}
-      <Text style={styles.note}>Saved on this phone. Cloud backup isn't connected yet.</Text>
+      <Text style={styles.note}>Kept on this phone for now.</Text>
     </ScrollView>
   );
 }
@@ -60,7 +60,7 @@ function OutingCard({ row, onPress }: { row: SavedOutingRow; onPress: () => void
   return (
     <Pressable
       accessibilityRole="button"
-      accessibilityLabel={`${row.name}. ${v.returnLabel}. About ${fmtFt(a.totalMetres)} outward. Longest mapped stretch about ${fmtFt(longest)}, ${fits ? "within" : "over"} your limit. Saved ${ageLabel(row.savedAt)}. Open`}
+      accessibilityLabel={`${row.name}. ${v.returnLabel}. About ${fmtFt(a.totalMetres)} on the way there. Longest mapped stretch about ${fmtFt(longest)}, ${fits ? "within" : "over"} your limit. Saved ${ageLabel(row.savedAt)}. Open`}
       onPress={onPress}
       style={({ pressed }) => [pressed && { opacity: 0.85 }]}
     >
@@ -74,8 +74,8 @@ function OutingCard({ row, onPress }: { row: SavedOutingRow; onPress: () => void
         </View>
         <View style={styles.facts}>
           <Fact label="Longest stretch" value={fmtFt(longest)} />
-          <Fact label="Outward" value={fmtFt(a.totalMetres)} />
-          <Fact label="Your limit" value={`${Math.round(mToFt(row.snapshot.prefs.maxStretchM))} ft`} />
+          <Fact label="Way there" value={fmtFt(a.totalMetres)} />
+          <Fact label="Pause every" value={`${Math.round(mToFt(row.snapshot.prefs.maxStretchM))} ft`} />
         </View>
         <View style={styles.chips}>
           <Chip
@@ -83,7 +83,7 @@ function OutingCard({ row, onPress }: { row: SavedOutingRow; onPress: () => void
             label={v.returnLabel}
             tone={row.snapshot.returnMode === "undecided" ? "caution" : "neutral"}
           />
-          <Chip icon="time-outline" label={`Saved ${ageLabel(row.savedAt)}`} />
+          <Chip icon="time-outline" label={`Kept ${ageLabel(row.savedAt)}`} />
         </View>
       </Card>
     </Pressable>

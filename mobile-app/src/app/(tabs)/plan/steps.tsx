@@ -59,7 +59,7 @@ export default function RouteSteps() {
       return [walk, stop.counted ? `Rest at ${name}.` : `Pass ${name}, not counted as a rest.`];
     }),
     `Arrive at ${destinationLabel(destination, state.destinationVia)}.`,
-    `Longest stretch between rests is about ${fmtFt(analysis.longestMappedStretchMetres).replace(" ft", " feet")}. Seating and approach are unconfirmed.`,
+    `The longest stretch between pauses is about ${fmtFt(analysis.longestMappedStretchMetres).replace(" ft", " feet")}. Seating and approach are unconfirmed.`,
   ].join(" ");
 
   const toggleSpeech = async () => {
@@ -102,7 +102,7 @@ export default function RouteSteps() {
 
       <Card style={{ gap: space.md }}>
         <View style={styles.summaryHead}>
-          <Text style={styles.limitText}>Your limit: <Text style={styles.bold}>{state.limitFt} ft</Text></Text>
+          <Text style={styles.limitText}>Pause every <Text style={styles.bold}>{state.limitFt} ft</Text></Text>
           <StatusBadge fits={analysis.withinMappedPreference} size="lg" />
         </View>
         <View style={styles.stats}>
@@ -111,15 +111,15 @@ export default function RouteSteps() {
             value={fmtFt(analysis.longestMappedStretchMetres)}
             tone={analysis.withinMappedPreference ? "accent" : "caution"}
           />
-          <StatTile label="Total walk" value={fmtFt(analysis.totalMetres)} />
+          <StatTile label="Whole walk" value={fmtFt(analysis.totalMetres)} />
         </View>
-        <Text style={styles.support}>Along mapped paths. Seats and the last few steps to them aren't confirmed.</Text>
+        <Text style={styles.support}>Measured along mapped paths. Benches come from map data, so give them a glance as you go.</Text>
       </Card>
 
       {previewing.length > 0 ? (
         <Notice>
-          Same path, without resting at {previewing.map((s) => placeLabel(placesById.get(s.placeId))).join(" or ")}.
-          This is a preview, not a different route. Open the stop to restore it.
+          Same path, but skipping the pause at {previewing.map((s) => placeLabel(placesById.get(s.placeId))).join(" or ")}.
+          This is a "what if", not a new route. Open the stop to bring the pause back.
         </Notice>
       ) : null}
 
@@ -135,7 +135,7 @@ export default function RouteSteps() {
       {candidate.route.steps.length > 0 ? (
         <View style={{ gap: space.sm }}>
           <SecondaryButton
-            label={showDirections ? "Hide ordered directions" : "View ordered directions"}
+            label={showDirections ? "Hide turn-by-turn" : "Show turn-by-turn"}
             onPress={() => setShowDirections((v) => !v)}
           />
           {showDirections
@@ -149,13 +149,13 @@ export default function RouteSteps() {
       ) : null}
 
       <PrimaryButton
-        label="Save this outing"
+        label="Keep this walk"
         icon="bookmark-outline"
         disabled={previewing.length > 0}
-        hint={previewing.length > 0 ? "Restore the previewed stop before saving" : undefined}
+        hint={previewing.length > 0 ? "Bring the skipped pause back before keeping this walk" : undefined}
         onPress={() => router.push("/modals/save")}
       />
-      {previewing.length > 0 ? <Text style={styles.support}>Restore the previewed stop to save this outing.</Text> : null}
+      {previewing.length > 0 ? <Text style={styles.support}>Bring the skipped pause back to keep this walk.</Text> : null}
 
       <Attribution lines={[candidate.route.attribution]} />
     </ScrollView>

@@ -7,6 +7,11 @@ export const ORS_URL = "https://api.heigit.org/openrouteservice/v2/directions/fo
 export const ORS_ATTRIBUTION = "Routes © openrouteservice.org by HeiGIT · Map data © OpenStreetMap contributors";
 export const ROUTE_ADAPTER_VERSION = 1;
 
+/** Snap limit for waypoint i of n: wider for the endpoints, strict for planned seats. */
+export function snapLimitM(i: number, n: number): number {
+  return i === 0 || i === n - 1 ? LIMITS.endpointSnapRadiusM : LIMITS.snapRadiusM;
+}
+
 /** Same settings for every comparable candidate. No optimization, no skipped segments. */
 export function buildOrsRequest(coordinates: readonly LonLat[]) {
   if (coordinates.length < 2 || coordinates.length > 4) {
@@ -14,7 +19,7 @@ export function buildOrsRequest(coordinates: readonly LonLat[]) {
   }
   return {
     coordinates: coordinates.map(([lon, lat]) => [lon, lat]),
-    radiuses: coordinates.map(() => LIMITS.snapRadiusM),
+    radiuses: coordinates.map((_, i) => snapLimitM(i, coordinates.length)),
     units: "m",
     instructions: true,
     preference: "shortest",
@@ -94,7 +99,7 @@ export function normalizeOrsRoute(json: unknown, requested: readonly LonLat[], f
 
   const snapped = way_points.map((i) => coordinates[i]);
   const snapOffsetsM = snapped.map((s, i) => distanceM(requested[i], s));
-  if (snapOffsetsM.some((o) => o > LIMITS.snapRadiusM)) throw new RouteRejection("EXCESSIVE_SNAP");
+  if (snapOffsetsM.some((o, i) => o > snapLimitM(i, snapOffsetsM.length))) throw new RouteRejection("EXCESSIVE_SNAP");
 
   const steps: RouteStep[] = [];
   segments.forEach((seg, legIndex) => {

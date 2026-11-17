@@ -20,9 +20,13 @@ export function RouteTimeline({
   onStopPress?: (placeId: string) => void;
 }) {
   const legs = candidate.route.legMetres;
+  const offsets = candidate.route.snapOffsetsM;
+  // Only worth mentioning when the place is noticeably set back from the path.
+  const gap = (m: number | undefined, verb: string) =>
+    m !== undefined && m > 10 ? `The path ${verb} about ${fmtFt(m)} away` : undefined;
   return (
     <View>
-      <Node marker="start" kicker="Start" title={startLabel} />
+      <Node marker="start" kicker="Set off" title={startLabel} note={gap(offsets[0], "begins")} />
       {legs.map((m, i) => {
         const stop = evaluation.stops[i];
         const place = stop ? placesById.get(stop.placeId) : undefined;
@@ -39,12 +43,12 @@ export function RouteTimeline({
             {stop ? (
               <Node
                 marker={stop.counted ? "rest" : "unknown"}
-                kicker={stop.counted ? "Rest stop" : "Not counted as a rest"}
+                kicker={stop.counted ? "Pause here" : "Passing by (not a rest)"}
               >
                 <Pressable
                   accessibilityRole="button"
                   accessibilityLabel={
-                    `${stop.counted ? "Rest stop" : "Not counted as a rest"}: ${placeLabel(place)}. ` +
+                    `${stop.counted ? "Pause here" : "Passing by, not counted as a rest"}: ${placeLabel(place)}. ` +
                     (stop.counted ? (place ? seatSummary(place) : "") : reasonText(stop.exclusionReasons[0])) +
                     ". Approach unconfirmed. Open details"
                   }
@@ -57,7 +61,7 @@ export function RouteTimeline({
                     <Text style={styles.stopDetail}>
                       {stop.counted ? (place ? seatSummary(place) : "") : reasonText(stop.exclusionReasons[0])}
                     </Text>
-                    <Text style={styles.stopFoot}>Last few steps unconfirmed · {fmtFt(stop.snapOffsetMetres)} from the path</Text>
+                    <Text style={styles.stopFoot}>About {fmtFt(stop.snapOffsetMetres)} off the path · not checked in person</Text>
                   </View>
                   {onStopPress ? <Icon name="chevron-forward" size={20} color={colors.accent} /> : null}
                 </Pressable>
@@ -66,7 +70,7 @@ export function RouteTimeline({
           </View>
         );
       })}
-      <Node marker="end" kicker="Arrive" title={endLabel} last />
+      <Node marker="end" kicker="You've arrived" title={endLabel} note={gap(offsets.at(-1), "ends")} last />
     </View>
   );
 }
@@ -94,8 +98,15 @@ function Marker({ kind }: { kind: "start" | "end" | "rest" | "unknown" }) {
 }
 
 function Node({
-  marker, kicker, title, children, last,
-}: { marker: "start" | "end" | "rest" | "unknown"; kicker: string; title?: string; children?: ReactNode; last?: boolean }) {
+  marker, kicker, title, note, children, last,
+}: {
+  marker: "start" | "end" | "rest" | "unknown";
+  kicker: string;
+  title?: string;
+  note?: string;
+  children?: ReactNode;
+  last?: boolean;
+}) {
   return (
     <View style={styles.nodeRow}>
       <View style={styles.rail} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
@@ -107,6 +118,7 @@ function Node({
           {kicker.toUpperCase()}
         </Text>
         {title ? <Text style={styles.nodeTitle}>{title}</Text> : null}
+        {note ? <Text style={styles.stopFoot}>{note}</Text> : null}
         {children}
       </View>
     </View>

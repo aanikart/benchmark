@@ -15,10 +15,10 @@ import { fmtFt } from "../../../services/units";
 import { colors, space, type } from "../../../theme/tokens";
 
 const NO_ALT_TEXT: Record<string, string> = {
-  NO_ELIGIBLE_SEATS: "No suitable mapped seating found in this search.",
-  NONE_USEFUL: "None of the routes checked through mapped seats shortens the longest stretch.",
-  ALL_REJECTED: "The seats checked couldn't be reached on mapped paths within the supported tolerance.",
-  SEARCH_INCOMPLETE: "Alternative search incomplete.",
+  NO_ELIGIBLE_SEATS: "We didn't find a bench near this route that fits your settings.",
+  NONE_USEFUL: "The benches near this route wouldn't shorten your longest stretch.",
+  ALL_REJECTED: "The nearby benches sit too far off the paths to plan a stop at.",
+  SEARCH_INCOMPLETE: "We ran out of time looking for a bench route.",
 };
 
 export default function CompareRoutes() {
@@ -67,18 +67,18 @@ export default function CompareRoutes() {
 
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
-      <Stack.Screen options={{ title: `Routes to ${state.destinationVia?.name ?? placeLabel(destination)}` }} />
+      <Stack.Screen options={{ title: `Ways to ${state.destinationVia?.name ?? placeLabel(destination)}` }} />
 
       <Card style={{ gap: space.md }}>
         <View style={styles.limitRow}>
           <View style={{ flex: 1 }}>
-            <Text style={styles.limitLabel}>YOUR LIMIT BEFORE A REST</Text>
+            <Text style={styles.limitLabel}>YOU'D LIKE A PAUSE EVERY</Text>
             <Text style={styles.limitValue}>{state.limitFt} ft</Text>
           </View>
           <TextButton
             label={editing ? "Done" : "Edit"}
             icon={editing ? "checkmark-circle" : "create-outline"}
-            accessibilityLabel={editing ? "Done editing your limit" : "Edit your limit"}
+            accessibilityLabel={editing ? "Done changing your pause distance" : "Change your pause distance"}
             onPress={() => setEditing((v) => !v)}
           />
         </View>
@@ -88,7 +88,7 @@ export default function CompareRoutes() {
       {cmp.isPending ? (
         <View style={styles.loading} accessibilityRole="progressbar" accessibilityLabel="Finding routes">
           <ActivityIndicator color={colors.accent} size="large" />
-          <Text style={styles.body}>Finding walking routes and places to sit…</Text>
+          <Text style={styles.body}>Tracing paths and looking for benches…</Text>
         </View>
       ) : null}
 
@@ -109,18 +109,18 @@ export default function CompareRoutes() {
       {cmp.data ? (
         <>
           {requirementsChanged(state) ? (
-            <Notice action={<SecondaryButton label="Find other stops" onPress={resubmit} />}>
-              Your seating requirements changed after this search. These results are limited to the stops already checked.
+            <Notice action={<SecondaryButton label="Look again" icon="refresh" onPress={resubmit} />}>
+              You changed your bench settings. These ways were found with the old ones, so look again for the best fit.
             </Notice>
           ) : null}
           {!cmp.data.searchComplete ? (
             <Notice action={<SecondaryButton label="Retry search" onPress={() => { queryClient.removeQueries({ queryKey: ["comparison"] }); resubmit(); }} />}>
-              Alternative search incomplete. The routes shown are the ones that finished.
+              We ran out of time looking for bench routes. These are the ones we finished.
             </Notice>
           ) : null}
           {catalog && Date.now() - Date.parse(cmp.data.catalogFetchedAt) > 24 * 3600 * 1000 ? (
             <Notice>
-              Place data was downloaded more than a day ago, so this comparison may be incomplete.
+              The map of places is over a day old, so a newer bench might be missing.
             </Notice>
           ) : null}
 
@@ -142,16 +142,16 @@ export default function CompareRoutes() {
             <Box>
               <Text style={styles.body}>{NO_ALT_TEXT[cmp.data.alternativeReason ?? "NONE_USEFUL"]}</Text>
               <Text style={styles.support}>
-                Only a limited set of nearby seats was checked. Try a closer destination or review your seating requirements.
+                We only check a handful of benches close to the way. A nearer destination or looser bench settings may help.
               </Text>
             </Box>
           ) : null}
           {cards.length > 0 && !anyFits ? (
-            <Text style={styles.support}>None of the routes checked has mapped stretches this short.</Text>
+            <Text style={styles.support}>Neither way has stretches this short. A longer pause distance, or a closer destination, would fit.</Text>
           ) : null}
 
           <Text style={styles.footnote}>
-            Distances follow mapped paths. Whether a seat is there and usable today, and the last few steps to it, aren't confirmed.
+            Distances follow mapped paths. Benches come from map data, so we can't promise one is there and free today.
           </Text>
           <Attribution lines={[cmp.data.direct.route.attribution]} />
         </>
@@ -199,7 +199,7 @@ function ErrorState({
                 </View>
               }
             >
-              {`${placeLabel(failed)} is mapped too far from a walking path to plan ${which === "origin" ? "from" : "to"} directly. ` +
+              {`${placeLabel(failed)} is more than 200 ft from any mapped walking path, so a route can't ${which === "origin" ? "start" : "end"} there. ` +
                 "Choose a nearby point instead (not yet checked):"}
             </Notice>
           );
@@ -236,7 +236,7 @@ function RouteCard({
     <Card style={styles.card}>
       <View style={styles.cardHead}>
         <View style={{ flex: 1 }}>
-          <Text style={styles.cardKicker}>{isDirect ? "DIRECT" : "WITH A PLACE TO SIT"}</Text>
+          <Text style={styles.cardKicker}>{isDirect ? "THE QUICK WAY" : "THE RESTFUL WAY"}</Text>
           <Text accessibilityRole="header" style={styles.cardTitle}>{model.title}</Text>
         </View>
         <StatusBadge fits={fits} size="lg" />
@@ -249,16 +249,16 @@ function RouteCard({
           tone={fits ? "accent" : "caution"}
           a11y={`Longest stretch without a planned rest about ${fmtFt(analysis.longestMappedStretchMetres)}, ${fits ? "within" : "over"} your limit`}
         />
-        <StatTile label="Total walk" value={fmtFt(analysis.totalMetres)} a11y={`Total walk about ${fmtFt(analysis.totalMetres)}`} />
+        <StatTile label="Whole walk" value={fmtFt(analysis.totalMetres)} a11y={`Whole walk about ${fmtFt(analysis.totalMetres)}`} />
       </View>
 
       <View style={styles.chips}>
         <Chip
           icon={model.countedStops ? "checkmark-circle" : "remove"}
-          label={model.countedStops ? `${model.countedStops} rest stop${model.countedStops === 1 ? "" : "s"}` : "No planned rests"}
+          label={model.countedStops ? `${model.countedStops} bench stop${model.countedStops === 1 ? "" : "s"}` : "No bench stops"}
           tone={model.countedStops ? "accent" : "neutral"}
         />
-        {!isDirect ? <Chip icon="walk" label={extra < 1 ? "Same distance" : `+${fmtFt(extra)} vs direct`} /> : null}
+        {!isDirect ? <Chip icon="walk" label={extra < 1 ? "No detour" : `+${fmtFt(extra)} detour`} /> : null}
         {uncounted.length > 0 ? (
           <Pressable
             accessibilityRole="button"
@@ -267,7 +267,7 @@ function RouteCard({
             onPress={() => setShowWhy((v) => !v)}
             hitSlop={10}
           >
-            <Chip icon="help-circle-outline" label={`${uncounted.length} not counted`} tone="caution" />
+            <Chip icon="help-circle-outline" label={`${uncounted.length} we can't count on`} tone="caution" />
           </Pressable>
         ) : null}
       </View>
@@ -285,7 +285,7 @@ function RouteCard({
         <View style={styles.ribbonWrap}>
           <Ribbon legMetres={analysis.legMetres} counted={counted} highlightStretch={!fits} />
           <Text style={styles.ribbonText}>
-            {st.length > 1 ? `Stretches: ${st.map((m) => fmtFt(m)).join(" → ")}` : `One stretch of ${fmtFt(st[0])}`}
+            {st.length > 1 ? `Walk ${st.map((m) => fmtFt(m)).join(", pause, ")}` : `One unbroken ${fmtFt(st[0])}`}
           </Text>
         </View>
       ) : null}
@@ -295,7 +295,7 @@ function RouteCard({
         <Text style={styles.tradeoffText}>{model.tradeoff}</Text>
       </View>
 
-      <SecondaryButton label="View steps" icon="arrow-forward" accessibilityLabel={`View steps for ${model.title}`} onPress={onView} />
+      <SecondaryButton label="Walk it through" icon="footsteps-outline" accessibilityLabel={`Walk through ${model.title} step by step`} onPress={onView} />
     </Card>
   );
 }

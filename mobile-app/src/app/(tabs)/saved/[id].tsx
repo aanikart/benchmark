@@ -37,7 +37,7 @@ export default function SavedOutingDetail() {
     return (
       <View style={styles.center}>
         <Text style={styles.body}>This outing is no longer saved on this phone.</Text>
-        <SecondaryButton label="Back to saved outings" onPress={() => router.back()} />
+        <SecondaryButton label="Back to your walks" onPress={() => router.back()} />
       </View>
     );
   }
@@ -67,7 +67,7 @@ export default function SavedOutingDetail() {
   };
 
   const confirmDelete = () =>
-    Alert.alert("Delete this outing?", "It will be removed from this phone.", [
+    Alert.alert("Let this walk go?", "It'll be removed from this phone.", [
       { text: "Cancel", style: "cancel" },
       {
         text: "Delete",
@@ -95,14 +95,13 @@ export default function SavedOutingDetail() {
     <ScrollView style={styles.screen} contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
       <Stack.Screen options={{ title: row.name }} />
 
-      <Notice action={<SecondaryButton label="Refresh for today" onPress={refresh} />}>
-        Saved {ageLabel(row.savedAt)}, using places downloaded {ageLabel(s.catalogFetchedAt)}. This is the plan as it
-        was saved; seats and paths may have changed.
+      <Notice icon="leaf-outline" action={<SecondaryButton label="Re-plan for today" icon="refresh" onPress={refresh} />}>
+        Kept {ageLabel(row.savedAt)}. This is the walk as you planned it, and benches or paths may have changed since.
       </Notice>
 
       <Box style={{ gap: space.sm }}>
         <View style={styles.head}>
-          <Text style={styles.cardTitle}>OUTWARD</Text>
+          <Text style={styles.cardTitle}>THE WAY THERE</Text>
           <StatusBadge fits={v.outward.analysis.withinMappedPreference} />
         </View>
         <Text style={styles.body}>
@@ -117,12 +116,12 @@ export default function SavedOutingDetail() {
         endLabel={placeLabel(destination)}
       />
 
-      <SectionLabel>Getting back</SectionLabel>
+      <SectionLabel>The way home</SectionLabel>
       {s.returnRoute && v.back && v.completeStretches ? (
         <>
           <Box style={{ gap: space.sm }}>
             <View style={styles.head}>
-              <Text style={styles.cardTitle}>RETURN</Text>
+              <Text style={styles.cardTitle}>THE WAY HOME</Text>
               <StatusBadge fits={v.back.analysis.withinMappedPreference} />
             </View>
             <Text style={styles.body}>
@@ -138,7 +137,7 @@ export default function SavedOutingDetail() {
           />
           <Box style={{ gap: space.sm }}>
             <View style={styles.head}>
-              <Text style={styles.cardTitle}>COMPLETE OUTING</Text>
+              <Text style={styles.cardTitle}>THERE AND BACK</Text>
               <StatusBadge fits={Math.max(...v.completeStretches) <= s.prefs.maxStretchM} />
             </View>
             <Text style={styles.body}>
@@ -147,7 +146,7 @@ export default function SavedOutingDetail() {
             </Text>
             <Text style={styles.support}>
               Stretches between rests: {v.completeStretches.map((m) => `≈ ${fmtFt(m)}`).join(" · ")}. No rest is
-              counted at the destination, so the walk in and the walk out are joined.
+              counted at the destination, so the last stretch in and the first stretch out add up.
             </Text>
           </Box>
         </>
@@ -162,8 +161,8 @@ export default function SavedOutingDetail() {
         </Box>
       )}
 
-      <SectionLabel>Name and private note</SectionLabel>
-      <TextInput value={name} onChangeText={(t) => { setName(t); setStatus(null); }} maxLength={80} accessibilityLabel="Outing name" style={styles.input} />
+      <SectionLabel>Its name and your note</SectionLabel>
+      <TextInput value={name} onChangeText={(t) => { setName(t); setStatus(null); }} maxLength={80} accessibilityLabel="Name of this walk" style={styles.input} />
       <TextInput
         value={note}
         onChangeText={(t) => { setNote(t); setStatus(null); }}
@@ -177,8 +176,8 @@ export default function SavedOutingDetail() {
       {dirty ? <PrimaryButton label="Save changes" disabled={!validateName(name)} onPress={saveText} /> : null}
       {status ? <Text style={styles.support} accessibilityLiveRegion="polite">{status}</Text> : null}
 
-      <Text style={styles.support}>Saved on this phone. Cloud backup isn't connected yet.</Text>
-      <SecondaryButton label="Delete this outing" onPress={confirmDelete} />
+      <Text style={styles.support}>Kept on this phone for now.</Text>
+      <SecondaryButton label="Let this walk go" icon="trash-outline" tone="danger" onPress={confirmDelete} />
       <Attribution lines={s.attribution} />
     </ScrollView>
   );

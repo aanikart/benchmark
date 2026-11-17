@@ -4,7 +4,13 @@ export const SNAPSHOT_SCHEMA_VERSION = 1;
 
 /** Search limits disclosed to the person; prototype tuning values, not physiological thresholds. */
 export const LIMITS = {
+  /** Benches must sit on the route to count as a rest. */
   snapRadiusM: 10,
+  /**
+   * Start and destination may be set back from a path (a café inside a building, a sculpture
+   * on a lawn). The route then begins/ends at the nearest mapped path, and the app shows that gap.
+   */
+  endpointSnapRadiusM: 60,
   nearBandM: 15,
   corridorM: 150,
   maxDirectM: 2000,

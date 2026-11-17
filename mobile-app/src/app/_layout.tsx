@@ -34,8 +34,8 @@ export default function RootLayout() {
           }}
         >
           <Stack.Screen name="(tabs)" />
-          <Stack.Screen name="places/[id]" options={{ headerShown: true, presentation: "modal", title: "Place details" }} />
-          <Stack.Screen name="modals/save" options={{ headerShown: true, presentation: "modal", title: "Save this outing" }} />
+          <Stack.Screen name="places/[id]" options={{ headerShown: true, presentation: "modal", title: "About this place" }} />
+          <Stack.Screen name="modals/save" options={{ headerShown: true, presentation: "modal", title: "Keep this walk" }} />
         </Stack>
       </PlannerProvider>
     </QueryClientProvider>

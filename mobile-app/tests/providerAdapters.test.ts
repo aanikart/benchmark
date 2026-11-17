@@ -113,10 +113,10 @@ describe("routing adapter (synthetic ORS-shaped payloads; no live ORS request ha
   const req = [[-122.17, 37.427], [-122.169, 37.427], [-122.168, 37.427]] as const;
   const coords = [[-122.17, 37.427], [-122.1695, 37.427], [-122.169, 37.427], [-122.168, 37.427]];
 
-  test("request uses lon/lat order, 10 m radiuses, metres, shortest", () => {
+  test("request uses lon/lat order, 60 m endpoint and 10 m seat radiuses, metres, shortest", () => {
     expect(buildOrsRequest(req)).toEqual({
       coordinates: [[-122.17, 37.427], [-122.169, 37.427], [-122.168, 37.427]],
-      radiuses: [10, 10, 10],
+      radiuses: [60, 10, 60],
       units: "m",
       instructions: true,
       preference: "shortest",
@@ -138,6 +138,14 @@ describe("routing adapter (synthetic ORS-shaped payloads; no live ORS request ha
     const moved = coords.map((c) => [...c]);
     moved[2] = [-122.169, 37.427 + 35 / 111_320];
     expect(code(() => normalizeOrsRoute(orsResponse({ coordinates: moved, wayPoints: [0, 2, 3], legs: [240, 270] }), req, FETCHED))).toBe("EXCESSIVE_SNAP");
+  });
+
+  test("an endpoint set back 40 m from the path is accepted and its offset reported; 80 m is rejected", () => {
+    const at = (north: number) => [[-122.17, 37.427 + north / 111_320], ...coords.slice(1)];
+    const ok = normalizeOrsRoute(orsResponse({ coordinates: at(40), wayPoints: [0, 2, 3], legs: [240, 270] }), req, FETCHED);
+    expect(ok.snapOffsetsM[0]).toBeGreaterThan(35);
+    expect(ok.snapOffsetsM[0]).toBeLessThan(45);
+    expect(code(() => normalizeOrsRoute(orsResponse({ coordinates: at(80), wayPoints: [0, 2, 3], legs: [240, 270] }), req, FETCHED))).toBe("EXCESSIVE_SNAP");
   });
 
   test("invalid geometry and data are validation errors", () => {

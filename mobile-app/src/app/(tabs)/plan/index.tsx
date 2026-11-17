@@ -14,6 +14,7 @@ import {
 } from "../../../components/ui";
 import { prefsOf, usePlanner } from "../../../features/planner/PlannerContext";
 import { useCatalog } from "../../../features/planner/queries";
+import { TrailBanner } from "../../../components/TrailBanner";
 import { kindIcon, kindLine, kindTone, placeLabel } from "../../../features/planner/viewModel";
 import { newRequestId } from "../../../services/outingApi";
 import { fmtFt } from "../../../services/units";
@@ -22,10 +23,10 @@ import type { Tone } from "../../../theme/tokens";
 
 type Filter = "all" | "art" | "everyday" | "seats";
 const FILTERS: { id: Filter; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "art", label: "Art and views" },
-  { id: "everyday", label: "Everyday places" },
-  { id: "seats", label: "Places to sit" },
+  { id: "all", label: "Anywhere" },
+  { id: "art", label: "Art & views" },
+  { id: "everyday", label: "Coffee & books" },
+  { id: "seats", label: "Benches & tables" },
 ];
 const PAGE = 8;
 
@@ -43,6 +44,7 @@ export default function PlanHome() {
   const [text, setText] = useState("");
   const [shown, setShown] = useState(PAGE);
   const insets = useSafeAreaInsets();
+  const [heroH, setHeroH] = useState(0);
   // Light status-bar text over the green banner; dark again when another screen is on top.
   useFocusEffect(
     useCallback(() => {
@@ -129,11 +131,11 @@ export default function PlanHome() {
   }, [state.destinationVia, state.originId, catalog, groups, placesById]);
 
   const missing = !origin
-    ? "Choose where you're starting"
+    ? "Pick where you're setting off from"
     : state.destinationVia && !destination
-      ? `Choose where to arrive at ${state.destinationVia.name}`
+      ? `Pick where to arrive at ${state.destinationVia.name}`
       : !destination
-        ? "Choose where you're going"
+        ? "Pick where you're heading"
         : null;
 
   const destName = state.destinationVia?.name ?? (destination ? placeLabel(destination) : null);
@@ -141,18 +143,16 @@ export default function PlanHome() {
   return (
     <View style={styles.screen}>
       <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
-        <View style={[styles.hero, { paddingTop: insets.top + space.lg }]}>
-          {/* Decorative circles: hidden from screen readers. */}
-          <View style={styles.heroBlobA} accessibilityElementsHidden importantForAccessibility="no-hide-descendants" />
-          <View style={styles.heroBlobB} accessibilityElementsHidden importantForAccessibility="no-hide-descendants" />
+        <View style={[styles.hero, { paddingTop: insets.top + space.lg }]} onLayout={(e) => setHeroH(e.nativeEvent.layout.height)}>
+          {heroH > 0 ? <TrailBanner height={heroH} /> : null}
           <View style={styles.brandRow}>
             <View style={styles.brandMark} accessibilityElementsHidden importantForAccessibility="no-hide-descendants">
               <MaterialCommunityIcons name="bench" size={26} color={colors.text} />
             </View>
             <Text style={styles.brand} accessibilityRole="header">Benchmark</Text>
           </View>
-          <Text style={styles.heroTitle}>Plan an outing</Text>
-          <Text style={styles.heroSub}>Walk at your pace, with places to pause along the way.</Text>
+          <Text style={styles.heroTitle}>Where shall we{"\n"}walk today?</Text>
+          <Text style={styles.heroSub}>Every route, with a bench in mind.</Text>
           <View style={styles.areaRow}>
             <Icon name="location" size={15} color={colors.text} />
             <Text style={styles.areaText}>Stanford campus</Text>
@@ -177,7 +177,7 @@ export default function PlanHome() {
         ) : null}
 
         {/* 1 · Start */}
-        <StepHeader n={1} title="Start from" />
+        <StepHeader n={1} title="Set off from" />
         <Pressable
           accessibilityRole="button"
           accessibilityLabel={origin ? `Starting point: ${placeLabel(origin)}. Change` : "Choose a starting point"}
@@ -186,9 +186,9 @@ export default function PlanHome() {
         >
           <IconTile name={origin ? kindIcon(origin) : "map-marker"} palette={origin ? kindTone(origin) : "seat"} tone={origin ? "solid" : "soft"} />
           <View style={styles.rowText}>
-            <Text style={styles.rowTitle} numberOfLines={2}>{origin ? placeLabel(origin) : "Choose a starting point"}</Text>
+            <Text style={styles.rowTitle} numberOfLines={2}>{origin ? placeLabel(origin) : "Your trailhead"}</Text>
             <Text style={styles.rowSub} numberOfLines={2}>
-              {origin ? placeContext.get(origin.id) ?? kindLine(origin) : "Pick a named place on campus"}
+              {origin ? placeContext.get(origin.id) ?? kindLine(origin) : "A café, library, sculpture or hall"}
             </Text>
           </View>
           <Text style={styles.rowAction}>{origin ? "Change" : "Choose"}</Text>
@@ -196,7 +196,7 @@ export default function PlanHome() {
         </Pressable>
 
         {/* 2 · Destination */}
-        <StepHeader n={2} title="Where to?" detail={destName ? `Selected: ${destName}` : "Pick a place to walk to"} />
+        <StepHeader n={2} title="Head towards" detail={destName ? `Heading to ${destName}` : "Somewhere worth the walk"} />
         <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.filters} accessibilityRole="radiogroup">
           {FILTERS.map((f) => {
             const on = f.id === filter;
@@ -218,7 +218,7 @@ export default function PlanHome() {
           <TextInput
             value={text}
             onChangeText={(t) => { setText(t); setShown(PAGE); }}
-            placeholder="Search by name, building or artist"
+            placeholder="Search a place, building or artist"
             placeholderTextColor={colors.secondary}
             accessibilityLabel="Search places by name, building or artist"
             style={styles.searchInput}
@@ -238,7 +238,7 @@ export default function PlanHome() {
                     icon="flower-tulip"
                     palette="garden"
                     title={entry.group.name}
-                    sub={`Sculpture garden · ${entry.group.memberIds.length} artworks`}
+                    sub={`Sculpture garden · ${entry.group.memberIds.length} works to wander past`}
                     nearbyM={entry.nearbyM}
                     selected={selected}
                     onPress={() =>
@@ -256,7 +256,7 @@ export default function PlanHome() {
                     title={placeLabel(entry.place)}
                     sub={kindLine(entry.place)}
                     where={placeContext.get(entry.place.id)}
-                    note={entry.place.routingPoint === null ? "Choose an arrival point" : undefined}
+                    note={entry.place.routingPoint === null ? "Pick a doorstep to arrive at" : undefined}
                     nearbyM={entry.nearbyM}
                     selected={selected}
                     onPress={() =>
@@ -283,7 +283,7 @@ export default function PlanHome() {
         </View>
         {catalog && choices.length === 0 ? (
           <Text style={[styles.support, styles.center]}>
-            {text ? "No places match that search." : "No places of this kind were found in this area."}
+            {text ? "Nothing on the map by that name." : "Nothing of this kind on the map around here."}
           </Text>
         ) : null}
         {choices.length > shown ? (
@@ -293,19 +293,19 @@ export default function PlanHome() {
         ) : null}
 
         {/* 3 · Rest preference */}
-        <StepHeader n={3} title="Longest walk before a rest" detail="Choose a distance that suits you" />
+        <StepHeader n={3} title="Pause every…" detail="The longest stretch you'd like between rests" />
         <Card>
           <LimitStepper valueFt={state.limitFt} onChange={(ft) => dispatch({ type: "setLimit", ft })} />
           <Divider />
           <ToggleRow
-            label="Require a backrest"
-            detail="Seats without a mapped backrest won't count"
+            label="Only benches with a backrest"
+            detail="Skip seats where a backrest isn't mapped"
             value={state.requireBackrest}
             onValueChange={(value) => dispatch({ type: "setRequireBackrest", value })}
           />
           <ToggleRow
-            label="Include picnic tables"
-            detail="Count mapped picnic tables as places to sit"
+            label="Picnic tables count too"
+            detail="Treat mapped picnic tables as places to pause"
             value={state.allowPicnicTables}
             onValueChange={(value) => dispatch({ type: "setAllowPicnicTables", value })}
           />
@@ -324,8 +324,8 @@ export default function PlanHome() {
           </View>
         ) : null}
         <PrimaryButton
-          label="Find routes"
-          icon="arrow-forward"
+          label="Map my walk"
+          icon="footsteps-outline"
           disabled={missing !== null}
           hint={missing ?? undefined}
           onPress={() => {
@@ -413,18 +413,18 @@ function ArrivalChooser({
       <View style={styles.arrivalHead}>
         <Icon name="flag" size={16} color={colors.accentDark} />
         <Text style={styles.arrivalTitle} accessibilityRole="header">
-          {selected && !open ? `Route ends at ${placeLabel(selected)}` : `Where in ${viaName}?`}
+          {selected && !open ? `Arriving by ${placeLabel(selected)}` : `Where in ${viaName}?`}
         </Text>
         {selected && !open ? (
           <TextButton label="Change" accessibilityLabel={`Change where you arrive at ${viaName}`} onPress={() => setOpen(true)} />
         ) : null}
       </View>
       {!isGroup && (open || !selected) ? (
-        <Text style={styles.arrivalHint}>Mapped as a building outline. These nearby places are possible arrival points, not checked entrances.</Text>
+        <Text style={styles.arrivalHint}>This one's mapped as a whole building. Pick a nearby spot to walk to; we don't know where its doors are.</Text>
       ) : null}
       {open || !selected ? (
         options.length === 0 ? (
-          <Text style={styles.arrivalHint}>No mapped point is close enough to arrive at. Choose another destination.</Text>
+          <Text style={styles.arrivalHint}>Nothing mapped close enough to walk up to. Try another destination.</Text>
         ) : (
           <View accessibilityRole="radiogroup" style={styles.arrivalOptions}>
             {options.map((o) => {
@@ -454,16 +454,14 @@ const styles = StyleSheet.create({
   content: { paddingBottom: space.xxl },
   body: { paddingHorizontal: space.lg },
   hero: {
-    backgroundColor: colors.accentDark, paddingHorizontal: space.xl, paddingBottom: space.xl + 4,
+    backgroundColor: colors.accentDark, paddingHorizontal: space.xl, paddingBottom: space.xxl + 8,
     borderBottomLeftRadius: 28, borderBottomRightRadius: 28, overflow: "hidden", gap: space.sm,
   },
-  heroBlobA: { position: "absolute", width: 220, height: 220, borderRadius: 110, backgroundColor: colors.accent, right: -70, top: -40, opacity: 0.55 },
-  heroBlobB: { position: "absolute", width: 120, height: 120, borderRadius: 60, backgroundColor: colors.sun, right: 30, bottom: -70, opacity: 0.9 },
   brandRow: { flexDirection: "row", alignItems: "center", gap: space.sm, marginBottom: space.sm },
   brandMark: { width: 42, height: 42, borderRadius: 13, backgroundColor: colors.sun, alignItems: "center", justifyContent: "center" },
-  brand: { fontSize: 26, fontWeight: "900", color: colors.onAccent, letterSpacing: -0.5 },
-  heroTitle: { fontSize: type.hero, fontWeight: "900", color: colors.onAccent, letterSpacing: -0.5 },
-  heroSub: { fontSize: type.body, color: "#E3F5EA", lineHeight: 23, maxWidth: 300 },
+  brand: { fontSize: 22, fontWeight: "800", color: colors.onAccent, letterSpacing: 2, textTransform: "uppercase" },
+  heroTitle: { fontSize: 32, fontWeight: "800", color: colors.onAccent, letterSpacing: -0.5, lineHeight: 38 },
+  heroSub: { fontSize: type.body, color: "#D8E3D3", lineHeight: 23, maxWidth: 300, fontStyle: "italic" },
   pressed: { opacity: 0.75 },
   areaRow: { flexDirection: "row", alignItems: "center", gap: 4, alignSelf: "flex-start", backgroundColor: colors.sun, borderRadius: 999, paddingHorizontal: 12, paddingVertical: 6, marginTop: space.sm },
   areaText: { fontSize: type.support, fontWeight: "800", color: colors.text },
@@ -499,7 +497,7 @@ const styles = StyleSheet.create({
     flexDirection: "row", alignItems: "stretch", backgroundColor: colors.surface, borderRadius: radius,
     borderWidth: 2, borderColor: "transparent", ...shadow,
   },
-  placeRowOn: { borderColor: colors.accent, backgroundColor: "#F6FBF8" },
+  placeRowOn: { borderColor: colors.accent, backgroundColor: "#F3F7F0" },
   placeMain: { flex: 1, flexDirection: "row", alignItems: "center", gap: space.md, padding: space.md, paddingLeft: space.md, minHeight: 72 },
   placeTitle: { fontSize: type.body, fontWeight: "700", color: colors.text },
   whereRow: { flexDirection: "row", alignItems: "flex-start", gap: 3, marginTop: 2 },

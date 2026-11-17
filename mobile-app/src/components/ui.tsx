@@ -130,10 +130,10 @@ export function StatusBadge({ fits, size = "md" }: { fits: boolean; size?: "md" 
     <View
       style={[styles.badge, fits ? styles.badgeFits : styles.badgeOver, size === "lg" && { paddingVertical: 6, paddingHorizontal: 12 }]}
       accessible
-      accessibilityLabel={fits ? "Mapped stretches fit your limit" : "A mapped stretch is over your limit"}
+      accessibilityLabel={fits ? "Every stretch fits your pause distance" : "One stretch is longer than your pause distance"}
     >
       <Icon name={fits ? "checkmark-circle" : "alert-circle"} size={16} color={fits ? colors.onAccent : colors.text} />
-      <Text style={[styles.badgeText, { color: fits ? colors.onAccent : colors.text }]}>{fits ? "Fits" : "Over"}</Text>
+      <Text style={[styles.badgeText, { color: fits ? colors.onAccent : colors.text }]}>{fits ? "Fits your pace" : "Long stretch"}</Text>
     </View>
   );
 }
@@ -233,9 +233,9 @@ export function Attribution({ lines }: { lines: readonly string[] }) {
 
 const styles = StyleSheet.create({
   card: { backgroundColor: colors.surface, borderRadius: radius, padding: space.lg, borderWidth: 2, borderColor: "transparent", ...shadow },
-  cardSelected: { borderColor: colors.accent, backgroundColor: "#F6FBF8" },
+  cardSelected: { borderColor: colors.accent, backgroundColor: "#F3F7F0" },
   stepHeader: { flexDirection: "row", alignItems: "center", gap: space.md, marginTop: space.xl, marginBottom: space.md },
-  stepNum: { width: 32, height: 32, borderRadius: 16, backgroundColor: colors.sun, alignItems: "center", justifyContent: "center" },
+  stepNum: { width: 32, height: 32, borderRadius: 10, backgroundColor: colors.sun, alignItems: "center", justifyContent: "center", transform: [{ rotate: "-4deg" }] },
   stepNumText: { color: colors.text, fontWeight: "900", fontSize: 16 },
   stepTitle: { fontSize: type.cardTitle, fontWeight: "700", color: colors.text },
   stepDetail: { fontSize: type.support, color: colors.secondary, marginTop: 1 },
@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     minHeight: 56, borderRadius: 16, backgroundColor: colors.accent, alignItems: "center", justifyContent: "center",
     flexDirection: "row", gap: space.sm, paddingHorizontal: space.lg, paddingVertical: space.md,
   },
-  primaryDisabled: { backgroundColor: "#E6E3DC" },
+  primaryDisabled: { backgroundColor: "#E4DFD3" },
   primaryText: { color: colors.onAccent, fontSize: type.body, fontWeight: "700", textAlign: "center" },
   primaryTextDisabled: { color: colors.secondary },
   secondary: {
@@ -273,7 +273,7 @@ const styles = StyleSheet.create({
   toggleDetail: { fontSize: type.support, color: colors.secondary },
   stepper: { flexDirection: "row", alignItems: "center", gap: space.md },
   stepBtn: { width: 56, height: 56, borderRadius: 28, backgroundColor: colors.accent, alignItems: "center", justifyContent: "center" },
-  stepBtnOff: { backgroundColor: "#E6E3DC" },
+  stepBtnOff: { backgroundColor: "#E4DFD3" },
   stepValue: { fontSize: type.hero, fontWeight: "800", color: colors.text },
   stepUnit: { fontSize: type.cardTitle, fontWeight: "600", color: colors.secondary },
   stepHelper: { fontSize: type.support, color: colors.secondary, marginTop: 2, textAlign: "center" },

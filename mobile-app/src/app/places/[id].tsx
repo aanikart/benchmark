@@ -42,7 +42,7 @@ export default function PlaceDetail() {
         {[kindLine(place), placeContext.get(place.id), place.name ? null : "no name in OpenStreetMap"].filter(Boolean).join(" · ")}
       </Text>
 
-      <SectionLabel>What the map says</SectionLabel>
+      <SectionLabel>What the map tells us</SectionLabel>
       <Box style={styles.rows}>
         {isSeat ? (
           <>
@@ -64,7 +64,7 @@ export default function PlaceDetail() {
         <Notice>Not counted as a rest: {eligibility.reasons.map(reasonText).join("; ")}.</Notice>
       ) : null}
 
-      <SectionLabel>Dates</SectionLabel>
+      <SectionLabel>How fresh is this?</SectionLabel>
       <Box style={styles.rows}>
         <Row label="OpenStreetMap last edited" value={formatSourceDate(place.sourceEditedAt?.slice(0, 7) ?? null)} />
         <Row label="Mapper's check date" value={formatSourceDate(place.mappedCheckDate)} />
@@ -73,13 +73,13 @@ export default function PlaceDetail() {
         {place.alsoMappedAs.length ? <Row label="Also mapped as" value={place.alsoMappedAs.join(", ")} /> : null}
       </Box>
       <Text style={styles.support}>
-        These dates describe map edits and downloads. Benchmark has not inspected this place.
+        These dates come from OpenStreetMap volunteers and our last download. We haven't visited this spot ourselves.
       </Text>
 
       {onSelectedRoute ? (
         <View style={{ gap: space.sm }}>
           <PrimaryButton
-            label={previewing ? "Restore this stop" : "Preview without this stop"}
+            label={previewing ? "Bring this pause back" : "What if I can't sit here?"}
             onPress={() => {
               dispatch({ type: "togglePreview", placeId: place.id });
               router.back();
@@ -87,8 +87,8 @@ export default function PlaceDetail() {
           />
           <Text style={styles.support}>
             {previewing
-              ? "Counts this place as a planned rest again."
-              : "Shows the same path without resting here, so you can see the joined distance. It does not find another route."}
+              ? "Counts this spot as a pause on your walk again."
+              : "Shows the same path without pausing here, so you see how long the walk gets. It doesn't find a different route."}
           </Text>
         </View>
       ) : null}
