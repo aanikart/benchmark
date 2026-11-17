@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560" role="img" aria-labelledby="title desc">
+<title id="title">Move in View / review now, retain less</title><desc id="desc">Video is temporary. Derived markers and separate user corrections remain in the saved session.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="560" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Move in View / review now, retain less</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">The current clip supports review; the saved record can reopen without video</text>
+<rect x="32" y="105" width="256" height="128" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Approved clip</text>
+<text x="52" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Upload with consent</text>
+<text x="52" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Keep the local review copy</text>
+<rect x="352" y="105" width="256" height="128" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="372" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Private processing</text>
+<text x="372" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Worker checks visibility</text>
+<text x="372" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Unclear clips may be declined</text>
+<rect x="672" y="105" width="256" height="128" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="692" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Candidate markers</text>
+<text x="692" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Intervals and body points</text>
+<text x="692" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Return to the review screen</text>
+<path d="M 300 169 L 340 169" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 620 169 L 660 169" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 800 245 L 800 292" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="304" width="256" height="136" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="692" y="337" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Person reviews</text>
+<text x="692" y="368" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Correct the count</text>
+<text x="692" y="394" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Keep changes separately</text>
+<rect x="352" y="304" width="256" height="136" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="372" y="337" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Saved session</text>
+<text x="372" y="368" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Derived timeline and notes</text>
+<text x="372" y="394" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">No original video</text>
+<path d="M 660 371 L 620 371" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="304" width="256" height="136" rx="14" fill="#f5ead5" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="337" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Temporary copies</text>
+<text x="52" y="368" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Delete after processing</text>
+<text x="52" y="394" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">or the current local review</text>
+<path d="M 160 245 L 160 292" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="465" width="896" height="51" rx="14" fill="#eaf0f7" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="497" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Crash, cancel, or timeout: clean up copies and reject any late result for a deleted session.</text>
+<text x="32" y="537" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Manual entry and analysis share one session ID. Saved corrections survive retries.</text>
+</svg>

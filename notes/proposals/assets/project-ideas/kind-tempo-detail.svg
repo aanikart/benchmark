@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="466" viewBox="0 0 960 466" role="img" aria-labelledby="title desc">
+<title id="title">Kind Tempo / time follows playback</title><desc id="desc">Illustrative interruption pauses sound and credited time. One saved session creates one garden event.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="466" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Kind Tempo / time follows playback</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Playback position controls the session record</text>
+<text x="32" y="115" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start">PLAYING</text>
+<text x="355" y="115" fill="#875616" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start">PAUSED</text>
+<text x="664" y="115" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start">RESUMED BY USER</text>
+<rect x="32" y="137" width="280" height="62" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="352" y="137" width="264" height="62" rx="14" fill="#f5ead5" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="656" y="137" width="272" height="62" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="175" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">0:00 → 0:45 played</text>
+<text x="372" y="175" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">No time added</text>
+<text x="676" y="175" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">0:45 → 1:20 played</text>
+<path d="M 320 168 L 344 168" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 624 168 L 648 168" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="246" width="340" height="139" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="279" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Save once</text>
+<text x="52" y="310" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">1:20 of participation</text>
+<text x="52" y="336" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Ended early by choice</text>
+<path d="M 384 315 L 451 315" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="464" y="246" width="464" height="139" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="484" y="279" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">One session → one garden event</text>
+<text x="484" y="310" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Retry uses the same session ID.</text>
+<text x="484" y="336" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">The leaf remains after a rest day.</text>
+<path d="M 870 311 L 870 283" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 870 293 Q 845 293 849 271 Q 872 272 870 293" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 870 303 Q 894 300 893 280 Q 869 282 870 303" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="32" y="443" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">A partial session counts as participation. Faster tempos and longer streaks earn no extra status.</text>
+</svg>

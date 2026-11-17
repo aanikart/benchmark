@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="558" viewBox="0 0 960 558" role="img" aria-labelledby="title desc">
+<title id="title">Benchmark / compare the longest rest interval</title><desc id="desc">The direct route is 420 metres without a rest. The bench route is 510 metres split into 240 and 270 metres.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="558" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Benchmark / compare the longest rest interval</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Illustrative routes • distances and inspection status must come from the actual pilot area</text>
+<text x="32" y="118" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">PREFERENCE: REST WITHIN 300 METRES</text>
+<rect x="32" y="138" width="896" height="118" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="171" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Direct · 420 m total</text>
+<circle cx="68" cy="211" r="7" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<circle cx="618" cy="211" r="7" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 88 211 L 599 211" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="317" y="194" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="middle">420 m without a rest</text>
+<text x="660" y="205" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Longest: 420 m</text>
+<text x="660" y="233" fill="#875616" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start">Does not match</text>
+<rect x="32" y="276" width="896" height="159" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="311" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Via inspected bench · 510 m total</text>
+<circle cx="68" cy="365" r="7" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<rect x="317" y="346" width="48" height="15" rx="3" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 314 370 L 368 370" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 325 361 L 325 387" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<path d="M 357 361 L 357 387" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<circle cx="618" cy="365" r="7" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 88 365 L 297 365" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 383 365 L 599 365" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<text x="190" y="347" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="middle">240 m</text>
+<text x="490" y="347" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="middle">270 m</text>
+<text x="660" y="357" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Longest: 270 m</text>
+<text x="660" y="385" fill="#246b69" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" text-anchor="start">Matches preference</text>
+<text x="52" y="412" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Start</text>
+<text x="313" y="412" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Bench</text>
+<text x="559" y="412" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Destination</text>
+<text x="32" y="475" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="19" font-weight="400" text-anchor="start">At a 200 m preference, neither route matches. The bench route adds 90 m.</text>
+<text x="32" y="535" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Inspect access to the stop, show when it was checked, and record return arrangements before saving.</text>
+</svg>

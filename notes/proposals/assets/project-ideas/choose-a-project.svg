@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="678" viewBox="0 0 960 678" role="img" aria-labelledby="title desc">
+<title id="title">Seven ways to make everyday mobility easier</title><desc id="desc">Benchmark is the recommended overall project. The seven cards describe each app’s main task.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="678" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Seven ways to make everyday mobility easier</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Choose the task you want to improve, then read its proposal</text>
+<rect x="32" y="104" width="424" height="122" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Walk by Walk</text>
+<text x="52" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Keep a walking record</text>
+<text x="52" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Estimated steps + personal notes</text>
+<rect x="383" y="131" width="40" height="48" rx="5" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 392 144 L 414 144" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 392 154 L 414 154" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 392 164 L 414 164" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<rect x="504" y="104" width="424" height="122" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Kind Tempo</text>
+<text x="524" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Make a walk inviting</text>
+<text x="524" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Optional rhythm + a saved leaf</text>
+<path d="M 875 177 L 875 149" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 875 159 Q 850 159 854 137 Q 877 138 875 159" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 875 169 Q 899 166 898 146 Q 874 148 875 169" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="32" y="246" width="424" height="122" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="279" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Move in View</text>
+<text x="52" y="310" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Review an exercise session</text>
+<text x="52" y="336" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Camera observations + corrections</text>
+<rect x="377" y="281" width="52" height="36" rx="6" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<circle cx="403" cy="299" r="11" fill="white" stroke="#246b69" stroke-width="2"/>
+<path d="M 389 277 L 405 277" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<rect x="504" y="246" width="424" height="122" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="279" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Days on Foot</text>
+<text x="524" y="310" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Remember the context</text>
+<text x="524" y="336" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Diary entries + explained comparisons</text>
+<circle cx="875" cy="297" r="13" fill="#f5ead5" stroke="#875616" stroke-width="2"/>
+<path d="M 895.0 297.0 L 901.0 297.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 889.142135623731 311.14213562373095 L 893.3847763108503 315.3847763108502" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 875.0 317.0 L 875.0 323.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 860.857864376269 311.14213562373095 L 856.6152236891497 315.3847763108502" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 855.0 297.0 L 849.0 297.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 860.857864376269 282.85786437626905 L 856.6152236891497 278.6152236891498" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 875.0 277.0 L 875.0 271.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 889.142135623731 282.85786437626905 L 893.3847763108503 278.6152236891498" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<rect x="32" y="388" width="424" height="122" rx="14" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5"/>
+<text x="52" y="421" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Benchmark</text>
+<text x="52" y="452" fill="#246b69" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="start">Recommended overall</text>
+<text x="52" y="478" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Plan walks around inspected rest stops</text>
+<rect x="379" y="420" width="48" height="15" rx="3" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 376 444 L 430 444" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 387 435 L 387 461" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<path d="M 419 435 L 419 461" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<rect x="504" y="388" width="424" height="122" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="421" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Evening Ready</text>
+<text x="524" y="452" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Prepare the evening path</text>
+<text x="524" y="478" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">One home task + your confirmation</text>
+<path d="M 848 436 L 875 416 L 902 436 M 856 432 L 856 462 L 894 462 L 894 432" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="869" y="444" width="12" height="18" rx="1" fill="#f5ead5" stroke="#246b69" stroke-width="1.5"/>
+<rect x="32" y="540" width="896" height="88" rx="14" fill="#eaf0f7" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="573" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Bring a Note</text>
+<text x="52" y="604" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Prepare an appointment account with selected entries and traceable wording.</text>
+<path d="M 849 557 H 890 Q 897 557 897 564 V 586 Q 897 593 890 593 H 868 L 854 603 V 593 H 849 Q 842 593 842 586 V 564 Q 842 557 849 557" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 853 569 L 885 569" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 853 580 L 877 580" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<text x="32" y="655" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">All seven start with a useful first-day task. None requires an invented health or fall-risk score.</text>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Evening Ready / the main journey</title><desc id="desc">Tonight’s checks are separate from the reusable path; sunset does not measure room light.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Evening Ready / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 53 139 L 80 119 L 107 139 M 61 135 L 61 165 L 99 165 L 99 135" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="74" y="147" width="12" height="18" rx="1" fill="#f5ead5" stroke="#246b69" stroke-width="1.5"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Describe a familiar path</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Use room labels; a full</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">floor plan is unnecessary.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="400" cy="142" r="13" fill="#f5ead5" stroke="#875616" stroke-width="2"/>
+<path d="M 420.0 142.0 L 426.0 142.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 414.14213562373095 156.14213562373095 L 418.3847763108502 160.38477631085024" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 400.0 162.0 L 400.0 168.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 385.85786437626905 156.14213562373095 L 381.6152236891498 160.38477631085024" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 380.0 142.0 L 374.0 142.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 385.85786437626905 127.85786437626905 L 381.6152236891498 123.61522368914976" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 400.0 122.0 L 400.0 116.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 414.14213562373095 127.85786437626905 L 418.3847763108502 123.61522368914976" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Choose one preparation</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Sunset helps with timing;</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">you choose the task.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="720" cy="143" r="23" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 707 143 L 717 152 L 734 134" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Confirm or postpone</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">A room segment changes</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">after your confirmation.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Tonight’s checks are separate from the reusable path; sunset does not measure room light.</text>
+</svg>
