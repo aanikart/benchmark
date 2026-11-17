@@ -1,16 +1,5 @@
-import { Text, View } from "react-native";
+import { Redirect } from "expo-router";
 
-export default function HomeScreen() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "#ffffff",
-      }}
-    >
-      <Text style={{ color: "#111111" }}>Start building your app!</Text>
-    </View>
-  );
+export default function Index() {
+  return <Redirect href="/plan" />;
 }

@@ -140,3 +140,43 @@ Keep passwords, signing files, and server-side keys out of the repository.
 - [Internal distribution](https://docs.expo.dev/build/internal-distribution/)
 - [Splash screen and app icon](https://docs.expo.dev/develop/user-interface/splash-screen-and-app-icon/)
 - [Environment variables](https://docs.expo.dev/guides/environment-variables/)
+
+## Running the planner (current state)
+
+The app plans walks on the Stanford campus from real OpenStreetMap places and real
+openrouteservice walking routes. Two processes run on your computer:
+
+```sh
+npm run dev:api   # local route service; keeps ORS_API_KEY off the phone (port 8787)
+npm start         # Metro / Expo
+```
+
+The phone or simulator must be able to reach the computer on the same network. If the route
+service is unreachable the app still lists places from a recorded OpenStreetMap download
+(`data/recorded/overpass-stanford.json`, dated in its `provenance` field) and says so.
+
+Copy `.env.example` to `.env` and fill it in. `ORS_API_KEY` is a server secret.
+
+### Checks
+
+```sh
+npm run typecheck
+npm test            # deterministic tests; synthetic fixtures are labeled as such
+npm run smoke:live  # real openrouteservice requests (uses quota; run deliberately)
+```
+
+### Layout
+
+- `shared/` — pure contracts and logic (eligibility, stretch arithmetic, bounded seat search,
+  provider adapters, request handler). No React Native imports.
+- `scripts/dev-api.ts` — development route service built on the shared handler.
+- `src/` — screens, components, planner state, local SQLite storage.
+- `tests/`, `smoke/` — deterministic tests and the live smoke test.
+
+### Not built yet
+
+Supabase sign-in, cloud save and the deployed `outing-api` function (outings are saved on the
+phone only), the outing guide and feedback, location / map-pin starting points, and the
+original icon and splash artwork.
+
+Attribution: places © OpenStreetMap contributors; routes © openrouteservice.org by HeiGIT.
