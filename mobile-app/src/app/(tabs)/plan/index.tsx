@@ -1,9 +1,12 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { useFocusEffect, useRouter } from "expo-router";
 import { setStatusBarStyle } from "expo-status-bar";
-import { Fragment, useCallback, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { ActivityIndicator, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
+import {
+  ActivityIndicator, Keyboard, KeyboardAvoidingView, Platform, Pressable, ScrollView, StyleSheet, Text, TextInput, View,
+} from "react-native";
+import type { ScrollViewInstance } from "react-native";
 import type { PlaceGroup } from "../../../../shared/areas";
 import type { Place } from "../../../../shared/contracts";
 import { seatEligibility } from "../../../../shared/eligibility";
@@ -45,6 +48,18 @@ export default function PlanHome() {
   const [shown, setShown] = useState(PAGE);
   const insets = useSafeAreaInsets();
   const [heroH, setHeroH] = useState(0);
+  // Keep the search box visible while typing: scroll it up and hide the pinned bar.
+  const scrollRef = useRef<ScrollViewInstance>(null);
+  const searchY = useRef(0);
+  const [keyboardOpen, setKeyboardOpen] = useState(false);
+  useEffect(() => {
+    const show = Keyboard.addListener(Platform.OS === "ios" ? "keyboardWillShow" : "keyboardDidShow", () => setKeyboardOpen(true));
+    const hide = Keyboard.addListener(Platform.OS === "ios" ? "keyboardWillHide" : "keyboardDidHide", () => setKeyboardOpen(false));
+    return () => {
+      show.remove();
+      hide.remove();
+    };
+  }, []);
   // Light status-bar text over the green banner; dark again when another screen is on top.
   useFocusEffect(
     useCallback(() => {
@@ -141,8 +156,13 @@ export default function PlanHome() {
   const destName = state.destinationVia?.name ?? (destination ? placeLabel(destination) : null);
 
   return (
-    <View style={styles.screen}>
-      <ScrollView contentContainerStyle={styles.content} keyboardShouldPersistTaps="handled">
+    <KeyboardAvoidingView style={styles.screen} behavior={Platform.OS === "ios" ? "padding" : undefined}>
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={styles.content}
+        keyboardShouldPersistTaps="handled"
+        keyboardDismissMode="on-drag"
+      >
         <View style={[styles.hero, { paddingTop: insets.top + space.lg }]} onLayout={(e) => setHeroH(e.nativeEvent.layout.height)}>
           {heroH > 0 ? <TrailBanner height={heroH} /> : null}
           <View style={styles.brandRow}>
@@ -213,7 +233,7 @@ export default function PlanHome() {
             );
           })}
         </ScrollView>
-        <View style={styles.search}>
+        <View style={styles.search} onLayout={(e) => { searchY.current = e.nativeEvent.layout.y; }}>
           <Icon name="search" size={18} color={colors.secondary} />
           <TextInput
             value={text}
@@ -224,6 +244,12 @@ export default function PlanHome() {
             style={styles.searchInput}
             returnKeyType="search"
             clearButtonMode="while-editing"
+            autoCorrect={false}
+            onFocus={() => {
+              // The search box lives inside the padded body; add the banner height to get its scroll offset.
+              setTimeout(() => scrollRef.current?.scrollTo({ y: Math.max(0, heroH + searchY.current - space.md), animated: true }), 50);
+            }}
+            onSubmitEditing={() => Keyboard.dismiss()}
           />
         </View>
 
@@ -315,7 +341,8 @@ export default function PlanHome() {
         </View>
       </ScrollView>
 
-      {/* Pinned action */}
+      {/* Pinned action (hidden while typing so it never covers the search box) */}
+      {keyboardOpen ? null : (
       <View style={styles.footer}>
         {missing ? (
           <View style={styles.missingRow}>
@@ -334,7 +361,8 @@ export default function PlanHome() {
           }}
         />
       </View>
-    </View>
+      )}
+    </KeyboardAvoidingView>
   );
 }
 
