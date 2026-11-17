@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Kind Tempo / the main journey</title><desc id="desc">Leaving the foreground pauses playback and credited time; resuming is your choice.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Kind Tempo / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 57 146 L 57 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 68 128 L 68 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 79 136 L 79 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 90 120 L 90 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 101 142 L 101 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Preview a gentle beat</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Choose tempo and sound</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">before you start moving.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 376 158 C 379 121, 420 164, 422 124" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="376" cy="158" r="4" fill="white" stroke="#246b69" stroke-width="2"/>
+<circle cx="422" cy="124" r="4" fill="white" stroke="#246b69" stroke-width="2"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Walk at your own pace</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Matching the beat is</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">optional; stop at any time.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 720 164 L 720 136" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 720 146 Q 695 146 699 124 Q 722 125 720 146" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 720 156 Q 744 153 743 133 Q 719 135 720 156" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Keep a session memento</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Save time and feedback;</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">add one garden event.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Leaving the foreground pauses playback and credited time; resuming is your choice.</text>
+</svg>

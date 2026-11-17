@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Bring a Note / the main journey</title><desc id="desc">Education receives a generic topic only; edits and deletions also affect dependent summaries.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Bring a Note / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="60" y="118" width="40" height="48" rx="5" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 69 131 L 91 131" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 69 141 L 91 141" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 69 151 L 91 151" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Record a concern</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Use your own words and</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">an approximate date if needed.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 379 121 H 420 Q 427 121 427 128 V 150 Q 427 157 420 157 H 398 L 384 167 V 157 H 379 Q 372 157 372 150 V 128 Q 372 121 379 121" fill="#eaf3f0" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 383 133 L 415 133" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 383 144 L 407 144" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Select what to discuss</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">A discussion card links</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">sentences to source entries.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="720" cy="143" r="23" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 707 143 L 717 152 L 734 134" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Review before sharing</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Edit or remove details;</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">sharing is always optional.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Education receives a generic topic only; edits and deletions also affect dependent summaries.</text>
+</svg>

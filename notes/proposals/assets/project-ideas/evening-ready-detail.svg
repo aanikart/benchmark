@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="509" viewBox="0 0 960 509" role="img" aria-labelledby="title desc">
+<title id="title">Evening Ready / a reported task on a familiar path</title><desc id="desc">Bedroom to hallway to bathroom. A hallway task is confirmed by the user; an unknown observation stays unknown.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="509" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Evening Ready / a reported task on a familiar path</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Illustrative evening • room conditions come from the person, not from the sunset service</text>
+<rect x="32" y="105" width="256" height="172" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Bedroom</text>
+<text x="52" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Path noted</text>
+<text x="52" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">No task selected</text>
+<path d="M 213 218 L 240 198 L 267 218 M 221 214 L 221 244 L 259 244 L 259 214" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="234" y="226" width="12" height="18" rx="1" fill="#f5ead5" stroke="#246b69" stroke-width="1.5"/>
+<rect x="352" y="105" width="256" height="172" rx="14" fill="#f5ead5" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="372" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Hallway</text>
+<text x="372" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Light checked</text>
+<text x="372" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Confirmed by you</text>
+<path d="M 533 218 L 560 198 L 587 218 M 541 214 L 541 244 L 579 244 L 579 214" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="554" y="226" width="12" height="18" rx="1" fill="#f5ead5" stroke="#246b69" stroke-width="1.5"/>
+<rect x="672" y="105" width="256" height="172" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="692" y="138" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Bathroom</text>
+<text x="692" y="169" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Doorway observation</text>
+<text x="692" y="195" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Not sure yet</text>
+<path d="M 853 218 L 880 198 L 907 218 M 861 214 L 861 244 L 899 244 L 899 214" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="874" y="226" width="12" height="18" rx="1" fill="#f5ead5" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 300 191 L 340 191" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 620 191 L 660 191" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="322" width="424" height="119" rx="14" fill="#eaf0f7" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="355" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Sunset context</text>
+<text x="52" y="386" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Example: sunset at 5:05 p.m.</text>
+<text x="52" y="412" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Your preparation time: 4:30 p.m.</text>
+<rect x="504" y="322" width="424" height="119" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="355" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Tonight’s confirmation</text>
+<text x="524" y="386" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">A completed task records your report.</text>
+<text x="524" y="412" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Tomorrow gets its own check.</text>
+<text x="32" y="486" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">The highlighted segment does not certify the room’s brightness or the safety of the whole home.</text>
+</svg>

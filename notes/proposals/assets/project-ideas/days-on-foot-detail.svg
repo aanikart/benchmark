@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="516" viewBox="0 0 960 516" role="img" aria-labelledby="title desc">
+<title id="title">Days on Foot / show why entries match</title><desc id="desc">Two comparable morning walks are selected. Missing and different records are explained rather than hidden.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="516" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Days on Foot / show why entries match</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Illustrative entries • comparisons describe what was recorded</text>
+<rect x="32" y="104" width="256" height="154" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Entry A · Monday</text>
+<text x="52" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Usual route · morning</text>
+<text x="52" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Effort: 2 out of 5</text>
+<text x="52" y="220" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Energy: rested</text>
+<rect x="352" y="104" width="256" height="154" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="372" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Entry B · Thursday</text>
+<text x="372" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Usual route · morning</text>
+<text x="372" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Effort: 3 out of 5</text>
+<text x="372" y="220" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="400" text-anchor="start">Energy: tired</text>
+<rect x="672" y="104" width="256" height="154" rx="14" fill="#eaf0f7" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="692" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Why these two?</text>
+<text x="692" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Same route and time band</text>
+<text x="692" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Both include effort</text>
+<text x="692" y="220" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Energy reports differ</text>
+<path d="M 300 181 L 340 181" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M 620 181 L 660 181" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="293" width="424" height="136" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="326" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Other entries remain visible</text>
+<text x="52" y="357" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Longer route: excluded from this comparison</text>
+<text x="52" y="383" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Missing effort: kept as an incomplete record</text>
+<rect x="504" y="293" width="424" height="136" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="326" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">When a source changes</text>
+<text x="524" y="357" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Edit: mark the comparison out of date</text>
+<text x="524" y="383" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Delete: remove dependent saved text</text>
+<text x="32" y="493" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">A small comparison cannot isolate the effects of sleep, weather, symptoms, or time of day.</text>
+</svg>

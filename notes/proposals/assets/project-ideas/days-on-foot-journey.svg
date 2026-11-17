@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Days on Foot / the main journey</title><desc id="desc">Useful from the first entry; a comparison describes records without claiming a cause.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Days on Foot / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="80" cy="142" r="13" fill="#f5ead5" stroke="#875616" stroke-width="2"/>
+<path d="M 100.0 142.0 L 106.0 142.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 94.14213562373095 156.14213562373095 L 98.38477631085024 160.38477631085024" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 80.0 162.0 L 80.0 168.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 65.85786437626905 156.14213562373095 L 61.615223689149765 160.38477631085024" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 60.0 142.0 L 54.0 142.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 65.85786437626905 127.85786437626905 L 61.61522368914976 123.61522368914976" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 80.0 122.0 L 80.0 116.0" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<path d="M 94.14213562373095 127.85786437626905 L 98.38477631085023 123.61522368914976" fill="none" stroke="#875616" stroke-width="2" stroke-linecap="round"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Record the day’s context</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Note rest, energy, and</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">your planned familiar walk.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="380" y="118" width="40" height="48" rx="5" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 389 131 L 411 131" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 389 141 L 411 141" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 389 151 L 411 151" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Add the walking account</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Save duration and effort;</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">skipped fields stay unknown.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="720" cy="143" r="23" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 707 143 L 717 152 L 734 134" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Compare suitable days</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">See the source fields and</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">why other days differ.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Useful from the first entry; a comparison describes records without claiming a cause.</text>
+</svg>

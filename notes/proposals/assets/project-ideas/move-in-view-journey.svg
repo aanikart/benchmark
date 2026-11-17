@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Move in View / the main journey</title><desc id="desc">Unclear or failed analysis leaves a manual log; reopening later shows derived data only.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Move in View / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="54" y="126" width="52" height="36" rx="6" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<circle cx="80" cy="144" r="11" fill="white" stroke="#246b69" stroke-width="2"/>
+<path d="M 66 122 L 82 122" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Record a known exercise</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">One supported movement;</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">manual entry is available.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 377 146 L 377 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 388 128 L 388 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 399 136 L 399 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 410 120 L 410 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 421 142 L 421 164" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Approve clip analysis</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">A private worker returns</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">possible repetitions.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<circle cx="720" cy="143" r="23" fill="#eaf3f0" stroke="#246b69" stroke-width="2"/>
+<path d="M 707 143 L 717 152 L 734 134" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Review and correct</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Inspect the current clip</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">and save your corrections.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Unclear or failed analysis leaves a manual log; reopening later shows derived data only.</text>
+</svg>

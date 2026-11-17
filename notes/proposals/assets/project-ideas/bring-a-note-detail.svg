@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="528" viewBox="0 0 960 528" role="img" aria-labelledby="title desc">
+<title id="title">Bring a Note / every assembled fact has a source</title><desc id="desc">A source report supports a template sentence, while personal wording and educational material remain separate.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="528" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Bring a Note / every assembled fact has a source</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Illustrative wording • the person chooses what to include</text>
+<rect x="32" y="104" width="352" height="176" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Selected entry · November 5</text>
+<text x="52" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">“I felt unsteady in the hallway.”</text>
+<text x="52" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Date marked approximate</text>
+<text x="52" y="220" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Source ID retained</text>
+<rect x="480" y="104" width="448" height="176" rx="14" fill="#eaf3f0" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="500" y="137" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Discussion card</text>
+<text x="500" y="168" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">You reported feeling unsteady</text>
+<text x="500" y="194" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">in the hallway around November 5.</text>
+<text x="500" y="220" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">View source entry</text>
+<path d="M 396 191 L 468 191" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="32" y="317" width="424" height="136" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="52" y="350" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Your wording</text>
+<text x="52" y="381" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">“I want to ask about walking at home.”</text>
+<text x="52" y="407" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Edits keep this personal-wording label.</text>
+<rect x="504" y="317" width="424" height="136" rx="14" fill="#eaf0f7" stroke="#c7d4d5" stroke-width="1.5"/>
+<text x="524" y="350" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" text-anchor="start">Education · MedlinePlus</text>
+<text x="524" y="381" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Fetched with a generic topic such as falls.</text>
+<text x="524" y="407" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Kept separate from your personal account.</text>
+<text x="32" y="505" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">After an edit, review before export. After deletion, remove dependent in-app text and saved copies.</text>
+</svg>

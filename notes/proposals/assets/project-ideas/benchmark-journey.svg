@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-labelledby="title desc">
+<title id="title">Benchmark / the main journey</title><desc id="desc">When neither route meets the preference, say so; an unavailable stop cannot split a gap.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="10" markerHeight="10" markerUnits="userSpaceOnUse" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 Z" fill="#246b69"/></marker></defs>
+<rect width="960" height="368" rx="20" fill="#faf9f5"/>
+<text x="32" y="42" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="700" text-anchor="start">Benchmark / the main journey</text>
+<text x="32" y="71" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">Three stages of the proposed experience</text>
+<rect x="32" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<path d="M 56 158 C 59 121, 100 164, 102 124" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="56" cy="158" r="4" fill="white" stroke="#246b69" stroke-width="2"/>
+<circle cx="102" cy="124" r="4" fill="white" stroke="#246b69" stroke-width="2"/>
+<text x="52" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Choose an outing</text>
+<text x="52" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Pick a destination and</text>
+<text x="52" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">preferred rest distance.</text>
+<path d="M 300 198 L 340 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="352" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="376" y="123" width="48" height="15" rx="3" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 373 147 L 427 147" fill="none" stroke="#246b69" stroke-width="4" stroke-linecap="round"/>
+<path d="M 384 138 L 384 164" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<path d="M 416 138 L 416 164" fill="none" stroke="#246b69" stroke-width="3" stroke-linecap="round"/>
+<text x="372" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Compare rest intervals</text>
+<text x="372" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">See extra distance, stops,</text>
+<text x="372" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">inspection dates, unknowns.</text>
+<path d="M 620 198 L 660 198" fill="none" stroke="#246b69" stroke-width="2.5" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="672" y="100" width="256" height="197" rx="14" fill="white" stroke="#c7d4d5" stroke-width="1.5"/>
+<rect x="700" y="118" width="40" height="48" rx="5" fill="#eaf3f0" stroke="#246b69" stroke-width="1.5"/>
+<path d="M 709 131 L 731 131" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 709 141 L 731 141" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<path d="M 709 151 L 731 151" fill="none" stroke="#246b69" stroke-width="2" stroke-linecap="round"/>
+<text x="692" y="201" fill="#213a43" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" text-anchor="start">Save a reviewed plan</text>
+<text x="692" y="236" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">Record return arrangements</text>
+<text x="692" y="261" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="400" text-anchor="start">and reopen the plan later.</text>
+<text x="32" y="345" fill="#52666c" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" text-anchor="start">When neither route meets the preference, say so; an unavailable stop cannot split a gap.</text>
+</svg>
